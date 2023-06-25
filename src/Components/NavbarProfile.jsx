@@ -3,7 +3,8 @@ import { useNavigate, Link } from "react-router-dom";
 import Logo from "../Asset/Logo.png";
 import profil from "../Asset/profil.png";
 import { useDispatch, useSelector } from "react-redux";
-import { LogOut, reset } from "../features/authSlice";
+import { reset } from "../features/authSlice";
+// import { LogOut } from "../features/authSlice";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Navbar = () => {
   const { user } = useSelector((state) => state.auth);
 
   const logout = () => {
-    dispatch(LogOut());
+    // dispatch(LogOut());
     localStorage.removeItem("users");
     dispatch(reset());
     navigate("/login");
@@ -83,7 +84,7 @@ const Navbar = () => {
           </li>
           <li tabIndex={0} className="rounded-xl hover:bg-secondary">
             <details>
-              <summary classname="hover:bg-secondary">Kegiatan</summary>
+              <summary className="hover:bg-secondary">Kegiatan</summary>
               <ul className="pl-2 text-primary">
                 <li>
                   <Link to="/event">Event</Link>
@@ -162,7 +163,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a className="justify-between">
+            <a href="/favorite" className="justify-between">
               Favorite
               <span>
                 <svg
@@ -175,7 +176,7 @@ const Navbar = () => {
                 >
                   <path
                     strokeLinecap="round"
-                    stroke-strokeLinejoin="round"
+                    stroke-strokelinejoin="round"
                     d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
                   />
                 </svg>
@@ -183,7 +184,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <button onClick={logout} className="justify-between">
+            <button onClick={logout}className="justify-between">
               Keluar
               <span>
                 <svg

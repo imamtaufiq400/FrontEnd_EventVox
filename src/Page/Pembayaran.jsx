@@ -142,6 +142,11 @@ const Pembayaran = () => {
                 </div>
               </div>
             </form>
+
+            {/* Untuk Prototipe/Alur */}
+            <center>
+              <a href="/event/pembayaran-selesai">Lanjutkan</a>
+            </center>
           </div>
         </div>
       </div>

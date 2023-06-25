@@ -40,10 +40,10 @@ export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
   }
 });
 
-export const LogOut = createAsyncThunk(
-  "user/LogOut",
-  await axios.delete("http://localhost:5000/logout")
-);
+// export const LogOut = createAsyncThunk(
+//   "user/LogOut",
+//   await axios.delete("http://localhost:5000/logout")
+// );
 
 export const DaftarUser = createAsyncThunk(
   "user/DaftarUser",

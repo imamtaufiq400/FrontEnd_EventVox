@@ -3,11 +3,13 @@ import Input from "../Components/Input";
 import Textarea from "../Components/Input_Textarea";
 import Button from "../Components/Button";
 import ButtonOutline from "../Components/ButtonOutline";
+import Navbar from '../Components/NavbarAdmin';
 
 const PendaftaranVolunteer = () => {
   return (
     <>
       {/* Navbar */}
+      <Navbar />
 
       {/* Formulir */}
       <form>

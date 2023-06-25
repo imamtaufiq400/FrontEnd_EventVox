@@ -82,7 +82,7 @@ const PembayaranAdmin = () => {
             </form>
 
             <center>
-              <Link to="/admin/pendaftaran-event" className="hover:underline text-center">Lanjutkan</Link>
+              <Link to="/admin/pendaftaran-volunteer" className="hover:underline text-center">Lanjutkan</Link>
             </center>
           </div>
         </div>

@@ -4,6 +4,7 @@ import Icon1 from "../Asset/icons_1.svg";
 import Icon2 from "../Asset/icons_2.svg";
 import Icon3 from "../Asset/icons_3.svg";
 import Icon4 from "../Asset/icons_4.svg";
+import Navbar from '../Components/NavbarAdmin';
 
 const DaftarkanEvent = () => {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ const DaftarkanEvent = () => {
     <>
       <div>
         {/* Navbar */}
+        <Navbar />
 
         {/* Hero */}
         <div className="flex justify-center">
