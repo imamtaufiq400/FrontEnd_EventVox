@@ -1,8 +1,12 @@
 import "../App.css";
 import Navbar from "../Components/NavbarProfile";
 import Clock from "../Asset/icons_clock.svg";
+import Button from "../Components/Button";
+import { useNavigate, Link } from "react-router-dom";
 
 const Pembayaran = () => {
+  const navigate = useNavigate()
+
   return (
     <>
       <div>
@@ -78,8 +82,33 @@ const Pembayaran = () => {
           <div>
             <form>
               <div className="px-10 md:px-96 sm:px-24">
-                <div>
-                  <p className="font-bold text-2xl text-primary my-4">
+                <div className="text-black">
+                  {/* Pembayaran */}
+                  <p className="font-bold text-2xl text-primary mt-8 mb-2">
+                    Pembayaran
+                  </p>
+                  <p>Silakan melakukan pembayaran melalui no rekenning ini</p>
+
+                  <p className="font-bold text-black my-2">Bank BCA</p>
+                  <p>Nama : Budi Handoko</p>
+                  <div className="border-2 rounded-md px-4 py-1 mt-1">
+                    <p>4628320901293735390</p>
+                  </div>
+
+                  {/* Bukti Pembayaran */}
+                  <p className="font-bold text-2xl text-primary mt-8 mb-2">
+                    Bukti Pembayaran
+                  </p>
+                  <p>Silakan upload bukti pembayaran Anda disini</p>
+                  <br />
+                  <input type="file" className="border-2 w-full rounded-md file:py-1 file:px-2 file:border-none file:bg-zinc-400 cursor-pointer"/>
+
+                  {/* Action */}
+                  <div className="flex justify-end my-8">
+                    <Link to="/event/pembayaran-selesai" className="py-2 px-4 bg-primary font-semibold text-white rounded-xl hover:bg-secondary">Upload</Link>
+                  </div>
+
+                  {/* <p className="font-bold text-2xl text-primary my-4">
                     Pembayaran
                   </p>
 
@@ -138,15 +167,15 @@ const Pembayaran = () => {
                         4628320901293735390
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </form>
 
             {/* Untuk Prototipe/Alur */}
-            <center>
+            {/* <center>
               <a href="/event/pembayaran-selesai">Lanjutkan</a>
-            </center>
+            </center> */}
           </div>
         </div>
       </div>
